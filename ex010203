@@ -1,0 +1,17 @@
+#Requisitos:
+# 1 - Crie um programa que escreva "Olá, mundo" na tela.
+# 2 - Colete o nome do usuário e dê as boas-vindas
+# 3 - Peça para o usuário digitar dois números e mostre a soma deles.
+
+print('Olá, mundo.')
+
+nome = str(input('Qual o seu nome? '))
+
+print('Olá, {}, seja bem-vindo! Escolha dois números.' .format(nome))
+
+n1 = int(input('Escolha o primeiro número: '))
+n2 = int(input('Escolha o segundo número: '))
+
+soma = n1 + n2
+
+print('A soma entre os números {} e {} é {}.' .format(n1, n2, soma))
