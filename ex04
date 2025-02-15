@@ -1,0 +1,27 @@
+# Requisitos:
+# 1 - Faça um programa que leia um input do usuário e entregue o maior número de informações sobre ele.
+
+# import sys para encerrar o programa após o condicional falso.
+import sys
+
+txt = input('Digite algo: ')
+
+print('O tipo do que você digitou é: ', type(txt))
+
+print('O que você digitou é apenas alfanumérico? ', txt.isalnum())
+
+if txt.isalnum() == False:
+    print('O que você digitou é composto apenas por espaços? ', txt.isspace())
+    if txt.isspace() == True:
+        sys.exit()
+    print('O que você digitou contém símbolos e/ou espaços.')
+    sys.exit()
+
+print('O que você digitou é apenas numérico? ', txt.isnumeric())
+if txt.isnumeric() == True:
+    sys.exit()
+
+print('O que você digitou utiliza apenas letras? ', txt.isalpha())
+print('O que você digitou está escrito apenas em letras maiúsculas? ', txt.isupper())
+print('O que você digitou está escrito apenas em letras minúsculas? ', txt.islower())
+print('O que você digitou está capitalizado? ', txt.istitle())
