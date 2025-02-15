@@ -1,0 +1,15 @@
+# Requisitos:
+# 1 - Faça um programa que receba um valor e um desconto
+# 2 - Calcule o valor do produto com o desconto aplicado
+# 3 - Receba o valor do salário de um funcionário e calcule um aumento de 15%.
+
+preco = float(input('Qual o valor do produto? '))
+desc = int(input('Qual a porcentagem do desconto aplicado? '))
+
+precdesc = ((100 - desc) * preco) / 100
+
+print('O produto custa R$ {}, mas com a aplicação de {} % de desconto, custará R$ {}.' . format(preco, desc, precdesc))
+
+sal = float(input('Qual o valor do salário do funcionário? '))
+
+print('Com o aumento de 15%, o funcionário passará a receber R$ {:.2f}.' .format((sal*115)/100))
