@@ -1,0 +1,11 @@
+# Requisitos:
+# Peça que o usuário digite um número e calcule a sua tabuada.
+
+n = int(input('Digite um número: '))
+tab = 1
+
+print('A tabuada de {} é: ' .format(n))
+
+while tab < 11:
+    print('{} x {} = {}' .format(tab, n, (n*tab)))
+    tab = tab + 1
