@@ -1,0 +1,14 @@
+# Requisitos:
+# 1 - Leia o nome completo de uma pessoa
+# 2 - Mostre o nome com todas as letras maiúsculas e minúsculas
+# 3 - Conte a quantidade de letras (sem espaço)
+# 4 - Conte quantas letras o primeiro nome tem
+
+nome = str(input('Qual o seu nome completo? ')).strip()
+nome2 = nome.split()
+
+print('Seu nome com todas as letras maiúsculas é {}.' .format(nome.upper()))
+print('Seu nome com todas as letras minúsculas é {}.' .format(nome.lower()))
+
+print('O seu nome tem {} letras.' .format((len(nome) - nome.count(' '))))
+print('Seu primeiro nome é {}.' .format(nome2[0]))
