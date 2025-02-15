@@ -1,0 +1,18 @@
+# Requisitos:
+# 1 - O programa deve ler um número real
+# 2 - O programa deve mostrar a sua porção inteira
+# 3 - Leia o cateto oposto e o cateto adjacente para calcular a hipotenusa
+
+import math
+
+n = float(input('Escreva um número fracionado: '))
+
+# sem importar math: .format(int(n))
+# math.floor(n)
+print('A sua porção inteira é {}.' .format(math.trunc(n)))
+
+co = int(input('Qual o valor do cateto oposto? '))
+ca = int(input('Qual o valor do cateto adjacente? '))
+
+# sem importar math: pow(((co**2)+(ca**2)), 0.5)
+print('O valor da hipotenusa é {}.' .format(math.hypot(co, ca)))
