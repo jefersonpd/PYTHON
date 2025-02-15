@@ -1,0 +1,20 @@
+# Requisitos:
+# 1 - Receba um número entre 0 e 9999
+# 2 - Divida o número em unidade, dezena, centena e milhar
+
+num = 99999
+
+while num < 0 or num > 9999:
+    num = int(input('Escreva um número de 0  a 9999: '))
+
+ntxt = str(num)
+ntotal = len(str(num))
+
+print('Unidade: {}' .format((ntxt[ntotal-1])))
+
+if ntotal >= 2:
+    print('Dezena: {}' .format(ntxt[ntotal-2]))
+if ntotal >= 3:
+    print('Centena: {}'.format(ntxt[ntotal-3]))
+if ntotal >= 4:
+    print('Milhar: {}'.format(ntxt[ntotal-4]))
