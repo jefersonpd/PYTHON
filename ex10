@@ -1,0 +1,7 @@
+# Requisitos:
+# 1 - Crie um programa que leia quanto dinheiro a pessoa possui e quantas ações pode comprar, de acordo com o valor escolhido por ele.
+
+carteira = float(input('Quantos R$ você pretende investir: '))
+acao = float(input('Qual o valor unitário, em R$, da ação que deseja comprar? '))
+
+print('Com {}, você pode comprar {} ações deste investimento.' .format(carteira, (carteira//acao)))
