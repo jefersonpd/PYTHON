@@ -1,0 +1,15 @@
+# Requisitos:
+# 1 - Escreva um programa que leia um número inteiro e escreva na tela o seu número sucessor e seu antecessor.
+# 2 - Calcule o seu (2.1)dobro, o seu (2.2)triplo e sua (2.3)raiz quadrada.
+
+import math
+
+n = int(input('Escreva um número: '))
+
+print('O número escolhido foi {}, seu sucessor é {} e seu antecessor é {}.' .format(n, n+1, n-1))
+
+# calcular raiz sem importar math:
+# (1) n ** (1/2)
+# (2) pow(n, (1/2))
+
+print('O dobro do valor escolhido é {}, o triplo é {} e sua raiz quadrada é {}.' .format((n*2), (n*3), math.sqrt(n)))
