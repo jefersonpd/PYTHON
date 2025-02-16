@@ -1,0 +1,20 @@
+# Requisitos:
+# 1 - Leia uma frase
+# 2 - Mostre quantas vezes aparece a letra "A"
+# 3 - Mostre em que posição a primeira letra "A" aparece
+# 4 - Mostre em que posição a última letra "A" aparece
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[34m'}
+
+frase = str(input('{}Digite uma frase: {}' .format(cores['texto'], cores['limpa']))).upper().strip()
+
+primA = frase.find('A')
+ultA = frase.rfind('A')
+totA = frase.count('A')
+
+if totA == 1:
+    print('{}Na frase "{}", a letra "A" aparece {} vez, na posição {}{}.' .format(cores['texto'], frase, totA, primA + 1, cores['limpa']))
+else:
+    print('{}Na frase "{}", a letra "A" aparece {} vezes, sendo a primeira na posição {} e a última na posição {}{}.'.format(cores['texto'], frase, totA, primA + 1, ultA + 1,
+                                                                                  cores['limpa']))
