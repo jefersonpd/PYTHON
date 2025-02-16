@@ -1,0 +1,10 @@
+# Requisitos:
+# 1 - Leia o nome completo de uma pessoa
+# 2 - Apresente o primeiro nome e o último sobrenome
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[35m'}
+
+nome = str(input('Qual o seu nome completo? ')).strip()
+
+print('{}Bom dia, Sr.ª {}{}{}' .format(cores['texto'], nome[:nome.find(' ')], nome[nome.rfind(' '):], cores['limpa']))
