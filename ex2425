@@ -1,0 +1,25 @@
+# Requisitos:
+# 1 - Peça para o usuário digitar o nome de uma cidade
+# 2 - Informe se o nome começa com Santo ou não
+# 3 - Informe se o nome contém "Sul"
+
+cores = {'limpa':'\033[m',
+         'boasvindas':'\033[4;30;47m',
+         'texto':'\033[34m'}
+
+
+print('{}OLÁ, MUNDO{}' .format(cores['boasvindas'], cores['limpa']))
+nome = str(input('{}Qual o nome da cidade escolhida?{} ' .format(cores['texto'],cores['limpa']))).upper()
+
+# .strip() após nome para eliminar espaços
+# print(nome[:5].upper() == 'SANTO')
+cidade = nome.split()
+
+if cidade[0] == 'SANTO':
+    print('{}A cidade começa com Santo!{}' .format(cores['texto'], cores['limpa']))
+else:
+    print('{}A cidade não começa com Santo!{}' .format(cores['texto'], cores['limpa']))
+
+# print('O nome contém "Sul"? {}' .format('SUL' in nome))
+if nome.find('SUL'):
+    print('{}O nome contém "Sul"{}.' .format(cores['texto'], cores['limpa']))
