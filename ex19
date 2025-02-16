@@ -1,0 +1,23 @@
+# Requisitos:
+# 1 - Leia nomes em uma lista e sorteie um deles
+# 2 - Faça um novo sorteio, determinando uma ordem para todos
+
+import random
+
+print('Você deve digitar quatro nomes.')
+
+lista = []
+
+n = 1
+
+while n < 5:
+    nomes = (input('Qual o nome nº {}? ' .format(n)))
+    lista.append(nomes)
+    n = n + 1
+
+print('O nome escolhido é {}.' .format(random.choice(lista)))
+
+# random.shuffle(lista)
+# print(lista)
+
+print('A ordem escolhida para o segundo exercício é {}.' .format(random.sample(lista, k = 4)))
