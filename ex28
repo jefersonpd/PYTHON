@@ -1,0 +1,35 @@
+# Requisitos:
+# 1 - Faça o computador escolher um número de 1 a 5
+# 2 - Peça para o usuário tentar adivinhar o número escolhido
+# 3 - Escreva na tela se o usuário adivinhou o número ou não
+
+import random
+from time import sleep
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[37m',
+         'perdeu':'\033[31m',
+         'ganhou':'\033[34m',
+         'processando': '\033[33m'}
+
+# from random import randint
+# numComp = randint(0, 5)
+
+print('{}Vamos jogar um jogo! Vou escolher um número de 1 a 5 e você irá tentar adivinhá-lo.{}' .format(cores['texto'], cores['limpa']))
+print('{}Hmm, deixa eu pensar...{}' .format(cores['texto'], cores['limpa']))
+sleep(2)
+print('{}Pronto! Escolhi o meu número.{}' .format(cores['texto'], cores['limpa']))
+
+lista = [1, 2, 3, 4, 5]
+
+numComp = random.choice(lista)
+
+numUsu = int(input('{}Qual número eu escolhi?{} ' .format(cores['texto'], cores['limpa'])))
+
+print('{}PROCESSANDO A INFORMAÇÃO{}' .format(cores['processando'], cores['limpa']))
+sleep(3)
+
+if numUsu == numComp:
+    print('{}O número escolhido foi {}. Você venceu!!!{}' .format(cores['ganhou'], numComp, cores['limpa']))
+else:
+    print('{}O número escolhido foi {}. Você perdeu.{}' .format(cores['perdeu'], numComp, cores['limpa']))
