@@ -1,0 +1,22 @@
+# Requisitos:
+# 1 - Faça um programa que leia a velocidade atual de um veículo
+# 2 - Se o veículo ultrapassar os 80 km/k, mostre uma mensagem de multa
+# 3 - O valor da multa deve ser R$ 7 por km/h do limite ultrapassado
+
+from time import sleep
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[37m',
+         'multado':'\033[31m'}
+
+velocidade = int(input('{}Qual a velocidade atual do veículo? ' .format(cores['texto'])))
+
+multa = (velocidade - 80) * 7
+
+print('ANALISANDO A SUA VELOCIDADE....{}' .format(cores['limpa']))
+sleep(2)
+
+if velocidade > 80:
+    print('{}Você está acima da velocidade permitida na via e foi multado! Sua multa custa R$ {}.{}' .format(cores['multado'], multa, cores['limpa']))
+else:
+    print('{}Você está dentro da faixa de velocidade permitida na via.{}' .format(cores['texto'], cores['limpa']))
