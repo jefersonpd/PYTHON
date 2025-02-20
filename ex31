@@ -1,0 +1,12 @@
+# Requisitos:
+# 1 - Pergunte a distância de uma viagem em km
+# 2 - Calcule o preço da viagem cobrando: (1) 0,50 por km até 200 km ou (2) 0,45 por km para viagens mais longas
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[34m'}
+
+dist = float(input('{}Qual a distância, em km, do ponto de destino? ' .format(cores['texto'])))
+
+preco = dist * 0.50 if dist <= 200 else dist * 0.45
+
+print('A sua viagem custará R$ {}{}.' .format(preco, cores['limpa']))
