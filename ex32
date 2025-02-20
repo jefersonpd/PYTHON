@@ -1,0 +1,19 @@
+# Requisitos:
+# 1 - Solicite a inserção de um ano
+# 2 - Diga se o ano é bissexto ou não
+# 3 - Calcule com base na data atual se o usuário digitar 0
+
+from datetime import date
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[31m'}
+
+ano = int(input('{}Escolha um ano para analisar (caso deseje utilizar o ano atual, digite 0): ' .format(cores['texto'])))
+
+if ano == 0:
+    ano = date.today().year
+
+if ano % 4 == 0 and ano % 100 != 0 or ano % 400 == 0:
+    print('O ano {} é bissexto.' .format(ano))
+else:
+    print('O ano {} não é bissexto.{}' .format(ano, cores['limpa']))
