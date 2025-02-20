@@ -1,0 +1,13 @@
+# Requisitos:
+# 1 - Solicite que o usuário digite um número
+# 2 - Retorne na tela se o número é par ou ímpar
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[34m'}
+
+num = int(input('{}Digite um número: ' .format(cores['texto'])))
+
+if num % 2 == 0:
+    print('O número escolhido é par!')
+else:
+    print('O número escolhido é impar! {}' .format(cores['limpa']))
