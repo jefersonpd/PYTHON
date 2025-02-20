@@ -1,0 +1,19 @@
+# Requisitos:
+# 1 - Receba 3 números
+# 2 - Informe se eles podem formar um triângulo
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[31m'}
+
+lista = []
+
+for n in range(0, 3):
+    num = int(input('{}Digite o comprimento das retas: ' .format(cores['texto'])))
+    lista.append(num)
+
+lista.sort()
+
+if (lista[0]+lista[1]) > lista[2]:
+    print('Estas retas podem formar um triângulo!')
+else:
+    print('Estas retas não podem formar um triângulo.{}' .format(cores['limpa']))
