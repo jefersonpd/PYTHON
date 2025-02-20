@@ -1,0 +1,16 @@
+# Requisitos:
+# 1 - Receba 3 valores
+# 2 - Imprima o maior e o menor valor
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[31m'}
+
+lista = []
+
+for n in range(0, 3):
+    num = int(input('{}Digite um número inteiro: ' .format(cores['texto'])))
+    lista.append(num)
+
+lista.sort()
+
+print('O maior número digitado é {} e o menor {}{}.' .format(lista[2], lista[0], cores['limpa']))
