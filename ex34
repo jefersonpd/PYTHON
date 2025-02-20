@@ -1,0 +1,12 @@
+# Requisitos:
+# 1 -  Receba o valor de um funcionário
+# 2 - Calcule um aumento de 15% para salários até R$ 1.250,00 e de 10% para salários superiores
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[31m'}
+
+salario = float(input('{}Qual o valor do salário do funcionário? ' .format(cores['texto'])))
+
+aumento = ((salario * 115)/100) if salario <= 1250 else ((salario * 110)/100)
+
+print('O novo salário do funcionário será R$ {}. {}' .format(aumento, cores['limpa']))
