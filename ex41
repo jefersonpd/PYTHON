@@ -1,0 +1,25 @@
+# Requisitos:
+# 1 - Solicite o ano de nascimento do usuário
+# 2 - Classifique-o de acordo com a sua faixa: (1) até 9 anos = MIRIM, (2) até 14 anos = INFANTIL, (3) até 19 anos = JUNIOR, (4) até 25 anos = SENIOR e (5) acima = MASTER
+
+from datetime import date
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[32m'}
+
+nascimento = int(input('{}Qual o ano de nascimento? ' .format(cores['texto'])))
+
+faixa = date.today().year - nascimento
+
+if faixa <= 9:
+    clas = 'MIRIM'
+elif faixa <= 14:
+    clas = 'INFANTIL'
+elif faixa <= 19:
+    clas = 'JUNIOR'
+elif faixa <= 25:
+    clas = 'SENIOR'
+else:
+    clas = 'MASTER'
+
+print('Você está na categoria {}.' .format(clas))
