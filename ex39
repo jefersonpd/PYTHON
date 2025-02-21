@@ -1,0 +1,21 @@
+# Requisitos:
+# 1 - Solicite o ano de nascimento do usuário
+# 2 - Informe se ele (1) irá se alistar (2) está no período ou (3) passou do período de se alistar no serviço militar
+# 3 - Informe quanto tempo falta/passou do prazo
+
+from datetime import date
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[32m',
+         'alerta':'\033[31m'}
+
+nascimento = int(input('{}Qual o ano de nascimento? ' .format(cores['texto'])))
+
+alistamento = date.today().year - nascimento
+
+if alistamento < 18:
+    print('Você ainda não está na idade de se alistar. Ainda falta(m) {} ano(s).' .format(18 - alistamento))
+elif alistamento == 18:
+    print('Você está na idade de se alistar! Procure o serviço militar.')
+else:
+    print('{}Você passou {} ano(s) da idade de alistamento. Regularize sua situação.' .format(cores['alerta'], alistamento - 18))
