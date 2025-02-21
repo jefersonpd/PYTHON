@@ -1,0 +1,16 @@
+# Requisitos:
+# 1 - Calculadora de empréstimo: Pergunte o valor do imóvel, o salário e em quantos anos irá pagar
+# 2 - Aprove o empréstimo se o valor não exceder 30% do salário
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[32m',
+         'negado':'\033[31m'}
+
+imovel = float(input('{}Qual o valor do imóvel desejado? ' .format(cores['texto'])))
+salario = float(input('Qual o valor do seu salário: '))
+pagamento = int(input('Em quantos anos deseja pagar? '))
+
+parcela = imovel / (pagamento * 12)
+
+print('O valor da prestação é R$ {:.2f}' .format(parcela))
+print('Empréstimo APROVADO!{}' .format(cores['limpa'])) if parcela < ((salario * 30) / 100 ) else print('{}Empréstimo NEGADO!{}' .format(cores['negado'], cores['limpa']))
