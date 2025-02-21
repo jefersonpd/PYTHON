@@ -1,0 +1,26 @@
+# Requisitos:
+# 1 - Receba 3 números e informe se eles podem formar um triângulo
+# 2 - Informe o tipo de triângulo que será formado: (1) equilátero (todos os lados iguais), (2) isósceles (2 lados iguais) e (3) escaleno (todos os lados diferentes)
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[31m'}
+
+lista = []
+
+for n in range(0, 3):
+    num = int(input('{}Digite o comprimento das retas: ' .format(cores['texto'])))
+    lista.append(num)
+
+lista.sort()
+
+if lista[0] == lista [1] == lista [2]:
+    clas = 'EQUILÁTERO'
+elif lista[0] == lista [1] != lista[2] or lista[0] != lista[1] == lista[2]:
+    clas = 'ISÓSCELES'
+elif lista[0] != lista[1] != lista[2]:
+    clas = 'ESCALENO'
+
+if (lista[0]+lista[1]) > lista[2]:
+    print('Estas retas podem formar um triângulo {}!' .format(clas))
+else:
+    print('Estas retas não podem formar um triângulo.{}' .format(cores['limpa']))
