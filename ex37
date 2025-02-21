@@ -1,0 +1,26 @@
+# Requisitos:
+# 1 - Peça para o usuário digitar um número inteiro
+# 2 - Converta o número, de acordo com a escolha do usuário, em (1) binário, (2) octal ou (3) hexadecimal
+
+cores = {'limpa':'\033[m',
+         'texto':'\033[32m'}
+
+num = int(input('{}Qual o número você deseja converter? ' .format(cores['texto'])))
+
+base = 0
+
+while base < 1 or base > 3:
+    base = int(input('''Você deseja convertê-lo em:
+    
+    (1) binário
+    (2) octal
+    (3) hexadecimal
+    
+    Digite apenas o número correspondente: '''))
+
+if base == 1:
+    print('O número {} em binário é: {}' .format(num, bin(num)))
+elif base == 2:
+    print('O número {} em octal é: {}' .format(num, oct(num)))
+else:
+    print('O número {} em hexadecimal é: {}' .format(num, hex(num)))
