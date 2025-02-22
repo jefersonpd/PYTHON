@@ -1,0 +1,30 @@
+# Requisitos:
+# 1 - Receba o valor das compras
+# 2 - Calcule o preço final de acordo com as formas de pagamento: (1) à vista pix - 10%, (2) à vista cartão - 5%, (3) até 2x cartão - preço normal e (4) 3x ou mais - 20%
+
+print('{:=^40}' .format(' BEM VINDO ÀS LOJAS BRASILEIRAS '))
+
+preco = float(input('\nQual o preço do produto escolhido? '))
+
+print('''\nESCOLHA A FORMA DE PAGAMENTO
+      
+      [1] à vista no pix ou dinheiro
+      [2] à vista no cartão
+      [3] parcelado''')
+
+pagamento = 0
+while pagamento not in [1, 2, 3]:
+    pagamento = int(input('\nQual a forma de pagamento desejada? '))
+
+if pagamento == 3:
+    parcela = int(input('Em quantas vezes deseja fazer? '))
+    if parcela in [1, 2]:
+        print('Em {} vezes as parcelas custarão R$ {} e o preço final será de R$ {}.' .format(parcela, (preco/parcela), preco))
+    elif parcela >= 3:
+        print('Em {} vezes as parcelas custarão R$ {} e o preço final será de R$ {}.'.format(parcela,
+                                                                                       ((preco * 120) / 100) / parcela,
+                                                                                       (preco * 120) / 100))
+elif pagamento == 2:
+    print('À vista no cartão, o preço final será R$ {}.' .format((preco*95)/100))
+elif pagamento == 1:
+    print('À vista no pix ou dinheiro, o preço final será R$ {}.' .format((preco*90)/100))
