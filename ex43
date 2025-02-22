@@ -1,0 +1,21 @@
+# Requisitos:
+# 1 - Receba a altura (m) e o peso (kg) de um indivíduo
+# 2 - Classifique-o de acordo: < 18.5 (abaixo do peso), entre 18.5 e 25 (peso ideal), 25 até 30 (acima do peso), 30 a 40 (obesidade) e > 40 (obesidade mórbida)
+
+alt = float(input('Qual a altura (m)? '))
+peso = float(input('Qual o peso? (kg) '))
+
+imc = peso / (alt * alt)
+
+if imc < 18.5:
+    clas = 'ABAIXO DO PESO'
+elif 18.5 < imc < 25:
+    clas = 'PESO IDEAL'
+elif 25 < imc < 30:
+    clas = 'ACIMA DO PESO'
+elif 30 < imc < 40:
+    clas = 'OBESIDADE'
+elif imc > 40:
+    clas = 'OBESIDADE MÓRBIDA'
+
+print('Pesando {} kg e medindo {} m, você está classificado na faixa: {}' .format(peso, alt, clas))
