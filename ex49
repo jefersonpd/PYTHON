@@ -1,0 +1,9 @@
+# Requisitos:
+# 1 - Faça uma tabuada utilizando a funçaão FOR
+
+n = int(input('Escolha um número: \n'))
+
+print('A tabuada do número {} é:' .format(n))
+
+for tab in range (1, 11):
+    print('{:2} x {} = {}' .format(tab, n, tab * n))
