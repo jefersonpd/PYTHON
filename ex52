@@ -1,0 +1,23 @@
+# Requisitos:
+# 1 - Faça um programa que leia um número e diga se ele é primo ou não
+
+cores = {'limpa':'\033[m',
+         'certo':'\033[33m',
+         'errado':'\033[31m'}
+
+num = int(input('Escolha um número: '))
+
+if num % 2 != 0 and num % 3 != 0:
+    resultado = 'É PRIMO!'
+elif num == 2 or num == 3:
+    resultado = 'É PRIMO!'
+else:
+    resultado = 'NÃO É PRIMO'
+
+for n in range (1, num + 1):
+    if resultado == 'É PRIMO!' and (n == 1 or n == num):
+        print('\033[33m', n, end=' ')
+    else:
+        print('\033[31m', n, end=' ')
+
+print('\n\n{}O número {} {}.' .format(cores['limpa'], num, resultado))
