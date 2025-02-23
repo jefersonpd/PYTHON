@@ -1,0 +1,14 @@
+# Requisitos:
+# 1 - Receba o primeiro termo e a razão de uma PA
+# 2 - Mostre os 10 primeiros resultados da progressão
+
+t = int(input('Qual o primeiro termo da PA? '))
+r = int(input('Qual a razão? '))
+
+p = 1
+while p < 11:
+    print(t, end=' -> ')
+    t = t + r
+    p = p + 1
+
+print('...')
