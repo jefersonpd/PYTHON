@@ -1,0 +1,46 @@
+# Requisitos:
+# 1 - Crie um programa que faça o computador jogar JOKENPO com você
+
+import random
+from time import sleep
+
+print('VAMOS JOGAR JOKENPO\n')
+print('''Suas opções:
+[1] PEDRA
+[2] PAPEL
+[3] TESOURA\n''')
+
+usuario = 0
+while usuario not in [1, 2, 3]:
+    usuario = int(input('Digite o número da sua escolha: '))
+
+listaEscolhas = ['PEDRA', 'PAPEL', 'TESOURA']
+
+computador = random.choice(listaEscolhas)
+
+usuario = listaEscolhas[usuario-1]
+
+if usuario == 'PEDRA' and computador == 'PAPEL':
+    resultado = 'COMPUTADOR VENCE!'
+elif usuario == 'PAPEL' and computador == 'TESOURA':
+    resultado = 'COMPUTADOR VENCE!'
+elif usuario == 'TESOURA' and computador == 'PEDRA':
+    resultado = 'COMPUTADOR VENCE!'
+else:
+    resultado = 'VOCÊ VENCEU!'
+
+if usuario == computador:
+    resultado = 'FOI UM EMPATE!'
+
+print('\nJO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO\n')
+sleep(1)
+
+print('=-' * 15)
+print('''Você escolheu {}
+O computador escolheu {}.''' .format(usuario, computador))
+print('=-' * 15)
+print(resultado)
